@@ -1,6 +1,6 @@
 # Weather.
 
-A clean, minimalist weather application focused on speed and simplicity. Built with a full-stack approach using React, Node.js, and both NoSQL and SQL databases.
+A clean, minimalist weather application focused on speed and simplicity. Built with a full-stack approach using React, Node.js, and MongoDB.
 
 ---
 
@@ -8,7 +8,7 @@ A clean, minimalist weather application focused on speed and simplicity. Built w
 
 I built Weather. because I wanted a weather tool that cut out all the noise. Most weather apps are cluttered with ads, news, and 10-day forecasts you don't always need. This project is my take on a classy weather dashboard—just the data you need, presented in a clean, monochrome interface.
 
-The goal was to keep the UI as light as possible while ensuring the backend was robust enough to handle multiple database types (MongoDB and PostgreSQL) and secure API proxying.
+The goal was to keep the UI as light as possible while ensuring the backend was robust enough to handle data securely through a dedicated proxy server.
 
 ## Features
 
@@ -16,14 +16,14 @@ The goal was to keep the UI as light as possible while ensuring the backend was 
 *   Clean Home Page: A simple landing page to get you started.
 *   Minimalist View: Bold typography and high-contrast data for easy reading.
 *   Smart Backend: A Node server that handles all the API calls securely so your keys stay private.
-*   History Tracking: Built-in support for saving search data to Supabase (Postgres) or MongoDB.
+*   Database Integration: Built-in support for MongoDB and Mongoose for data management.
 
 ## Tech Stack
 
 *   Frontend: React (Vite) for the UI. Custom CSS for the minimalist look.
 *   Backend: Node.js with the connect framework for handling requests.
 *   APIs: WeatherAPI for real-time data.
-*   Databases: MongoDB (Mongoose) and PostgreSQL (Supabase).
+*   Database: MongoDB and Mongoose for data handling and schemas.
 
 ## Setup
 
@@ -39,7 +39,7 @@ If you want to run this locally:
     ```bash
     cd backend
     npm install
-    # Add your WEATHER_API_KEY and DATABASE_URL to a .env file
+    # Add your WEATHER_API_KEY to a .env file
     node server.js
     ```
 
