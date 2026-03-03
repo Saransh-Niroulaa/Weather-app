@@ -1,65 +1,49 @@
 # Weather.
 
-A minimalist, sophisticated weather forecasting application built with a focus on clean UI/UX and a robust full-stack architecture. **Weather.** provides real-time meteorological data through a seamless, high-performance interface.
-
-![Version](https://img.shields.io/badge/version-1.0.0-black.svg?style=flat-square)
-![React](https://img.shields.io/badge/frontend-React-61DAFB.svg?style=flat-square&logo=react)
-![Node](https://img.shields.io/badge/backend-Node.js-339933.svg?style=flat-square&logo=node.js)
-![MongoDB](https://img.shields.io/badge/database-MongoDB-47A248.svg?style=flat-square&logo=mongodb)
+A clean, minimalist weather app focused on speed and simplicity. Built with a full-stack approach using React, Node.js, and both NoSQL and SQL databases.
 
 ---
 
-## 🌑 Overview
+## 🌑 About the Project
 
-**Weather.** is designed for users who appreciate clarity and precision. By stripping away the clutter found in traditional weather apps, it delivers a focused experience that prioritizes essential data through a refined, monochrome aesthetic.
+I built **Weather.** because I wanted a weather tool that cut out all the noise. Most weather apps are cluttered with ads, news, and 10-day forecasts you don't always need. This project is my take on a "classy" weather dashboard—just the data you need, presented in a clean, monochrome interface.
 
-## ✨ Key Features
+The goal was to keep the UI as light as possible while ensuring the backend was robust enough to handle multiple database types (MongoDB and PostgreSQL) and secure API proxying.
 
-*   **Real-time Forecasting**: Instant access to current weather conditions, including temperature, wind speed, humidity, and precipitation.
-*   **Minimalist Landing Page**: A clean, professional entry point that guides users into the core experience.
-*   **Location Intelligence**: Rapid search functionality for global cities with intelligent error handling.
-*   **Full-Stack Integration**: A dedicated Node.js proxy server ensures secure API communication and optimized data delivery.
-*   **Persistent Data Layer**: Integrated MongoDB and PostgreSQL (Supabase) capabilities for user management and search history tracking.
+## 🚀 What it does
 
-## 🛠️ Technical Stack
+*   **Fast Searching**: Get current weather for any city instantly.
+*   **Clean Home Page**: A simple landing page to get you started.
+*   **Minimalist View**: Bold typography and high-contrast data for easy reading.
+*   **Smart Backend**: A Node server that handles all the API calls securely so your keys stay private.
+*   **History Tracking**: Built-in support for saving search data to Supabase (Postgres) or MongoDB.
 
-### Frontend
-*   **React.js (Vite)**: For a lightning-fast, reactive user interface.
-*   **Modular CSS**: A refined, custom-built design system emphasizing negative space and elegant typography.
+## 🛠️ Tech I Used
 
-### Backend
-*   **Node.js**: Leveraging a custom `connect` middleware architecture for efficient request handling.
-*   **Weather API**: High-accuracy data sourcing for global meteorological updates.
-*   **Cross-Origin Resource Sharing (CORS)**: Configured for secure, cross-platform communication.
+*   **Frontend**: React (Vite) for the UI. Custom CSS for the minimalist look.
+*   **Backend**: Node.js with the `connect` framework for handling requests.
+*   **APIs**: WeatherAPI for real-time data.
+*   **Databases**: MongoDB (Mongoose) and PostgreSQL (Supabase/supabase-js).
 
-### Database
-*   **MongoDB & Mongoose**: Utilized for flexible, document-based storage.
-*   **PostgreSQL**: Integrated via Supabase for high-integrity relational data management.
+## 💻 Setup
 
-## 🚀 Getting Started
+If you want to run this locally:
 
-### Prerequisites
-*   Node.js (v16+)
-*   NPM or Yarn
-*   API Key from [WeatherAPI.com](https://www.weatherapi.com/)
-
-### Installation
-
-1.  **Clone the repository:**
+1.  **Clone it:**
     ```bash
     git clone https://github.com/Saransh-Niroulaa/Weather-app.git
     cd Weather-app
     ```
 
-2.  **Setup Backend:**
+2.  **Backend Setup:**
     ```bash
     cd backend
     npm install
-    # Create a .env file with your WEATHER_API_KEY
+    # Add your WEATHER_API_KEY and DATABASE_URL to a .env file
     node server.js
     ```
 
-3.  **Setup Frontend:**
+3.  **Frontend Setup:**
     ```bash
     cd ../frontend
     npm install
@@ -68,19 +52,4 @@ A minimalist, sophisticated weather forecasting application built with a focus o
 
 ---
 
-## 📝 Configuration
-
-Create a `.env` file in the `backend` directory:
-
-```env
-WEATHER_API_KEY=your_api_key_here
-DATABASE_URL=your_database_url_here
-```
-
-## 🌑 License
-
-Distributed under the ISC License. See `LICENSE` for more information.
-
----
-
-**Weather.** — *Clarity in every forecast.*
+**Weather.** — *Focus on the forecast.*
