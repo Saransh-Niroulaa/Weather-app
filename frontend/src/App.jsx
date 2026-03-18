@@ -13,7 +13,8 @@ const App = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch(`http://localhost:3000/weather?city=${city}`);
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+      const response = await fetch(`${API_URL}/weather?city=${city}`);
       if (!response.ok) throw new Error("Location not found");
       const data = await response.json();
       setWeather(data);
