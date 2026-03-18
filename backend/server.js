@@ -18,7 +18,9 @@ app.use(async (req, res) => {
             const weatherUrl = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
             const response = await fetch(weatherUrl);
             const data = await response.json();
-            res.writeHead(200, { 'Content-Type': 'application/json' });
+            
+            // Forward the correct status code (400 if location not found, 200 if OK)
+            res.writeHead(response.ok ? 200 : 400, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify(data));
         } catch (error) {
             res.writeHead(500, { 'Content-Type': 'application/json' });
