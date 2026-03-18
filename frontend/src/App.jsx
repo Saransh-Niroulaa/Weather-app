@@ -15,13 +15,8 @@ const App = () => {
     try {
       const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
       const response = await fetch(`${API_URL}/weather?city=${city}`);
+      if (!response.ok) throw new Error("Location not found");
       const data = await response.json();
-      
-      // If our server or the weather API returned an error, throw it
-      if (!response.ok || data.error) {
-        throw new Error("Location not found");
-      }
-      
       setWeather(data);
     } catch (err) {
       setError(err.message);
@@ -72,13 +67,13 @@ const App = () => {
             </div>
 
             {loading && <p className="condition-text">Locating...</p>}
-            {error && <p className="condition-text" style={{ color: '#d63031' }}>Error: {error}</p>}
+            {error && <p className="condition-text" style={{color: '#d63031'}}>Error: {error}</p>}
 
             {weather && !loading && (
               <div className="weather-display">
                 <h2 className="city-name">{weather.location.name}</h2>
                 <div className="condition-text">{weather.current.condition.text}</div>
-
+                
                 <div className="temp-large">
                   {Math.round(weather.current.temp_c)}°
                 </div>
