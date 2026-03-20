@@ -16,14 +16,12 @@ The goal was to keep the UI as light as possible while ensuring the backend was 
 *   Clean Home Page: A simple landing page to get you started.
 *   Minimalist View: Bold typography and high-contrast data for easy reading.
 *   Smart Backend: A Node server that handles all the API calls securely so your keys stay private.
-*   Database Integration: Built-in support for MongoDB and Mongoose for data management.
 
 ## Tech Stack
 
 *   Frontend: React (Vite) for the UI. Custom CSS for the minimalist look.
 *   Backend: Node.js with the connect framework for handling requests.
 *   APIs: WeatherAPI for real-time data.
-*   Database: MongoDB and Mongoose for data handling and schemas.
 
 ## Setup
 
